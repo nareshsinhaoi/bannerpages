@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Project Dashboard | Banner Managenent System - Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
+        <meta content="Coderthemes" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+
+    </head>
+
+	<body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":true, "leftSidebarScrollable":false,"darkMode":true, "showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="leftside-menu">
+                <!--- Sidemenu -->
+				<!-- LOGO -->
+<a href="home" class="logo text-center logo-light">
+    <span class="logo-lg">
+        <img src="assets/images/logo.svg" alt="" height="40" style="text-align:left;">
+    </span>
+    <span class="logo-sm">
+        <img src="assets/images/logo.svg" alt="" height="40" style="text-align:left;text-align: left;width:80px;">
+    </span>
+</a>
+
+<!-- LOGO -->
+<a href="home" class="logo text-center logo-dark">
+    <span class="logo-lg">
+        <img src="assets/images/logo-dark.png" alt="" height="16">
+    </span>
+    <span class="logo-sm">
+        <img src="assets/images/logo_sm_dark.png" alt="" height="16">
+    </span>
+</a>
+
+<div class="h-100" id="leftside-menu-container" data-simplebar="">
+<!--- Sidemenu -->
+		<ul class="side-nav">
+
+			<li class="side-nav-title side-nav-item">Apps</li>
+
+			<li class="side-nav-item">
+				<a href="/upload?page=viewer" class="side-nav-link">
+					<i class="uil-eye"></i>
+					<span> Viewer </span>
+				</a>
+			</li> 
+
+			<li class="side-nav-item">
+				<a href="/upload?page=protect" class="side-nav-link">
+					<i class="uil-lock"></i>
+					<span> Protect  </span>
+				</a>
+			</li>
+			 
+			
+			<li class="side-nav-item">
+				<a href="/filemanager"   class="side-nav-link">
+					<i class="uil-folder"></i> 
+					<span> Filemanager </span>
+				</a>
+			</li>
+			
+			<li class="side-nav-item">
+				<a href="/upload?page=conversion"   class="side-nav-link">
+					<i class="uil-file-exclamation-alt"></i>
+					<span> Conversion </span> 
+				</a> 
+			</li>
+						
+			<li class="side-nav-title side-nav-item">Apps</li>
+
+			<li class="side-nav-item">
+				<a href="/admin/users/user_list" class="side-nav-link">
+					<i class="uil-users-alt"></i>
+					<span> Users </span>
+				</a>
+			</li> 
+
+			<li class="side-nav-item">
+				<a data-bs-toggle="collapse" href="#sidebarAdunit" aria-expanded="false" aria-controls="sidebarAdunit" class="side-nav-link">
+					<i class="uil-flower"></i>
+					<span> Ad Unit </span>
+					<span class="menu-arrow"></span>
+				</a>
+				<div class="collapse" id="sidebarAdunit">
+					<ul class="side-nav-second-level">
+						<li>
+							<a href="/adunits/new_unit">Ad Unit</a>
+						</li> 
+						<li>
+							<a href="/adunits/adunits_list">Ad Unit List</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<li class="side-nav-item">
+				<a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" class="side-nav-link">
+					<i class="uil-document-layout-center"></i>
+					<span> Banners </span>
+					<span class="menu-arrow"></span>
+				</a>
+				<div class="collapse" id="sidebarCrm">
+					<ul class="side-nav-second-level">
+						<li>
+							<a href="/banner/add">Banner</a>
+						</li>
+						<li>
+							<a href="/banner/banners_list">Banner List</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<li class="side-nav-item">
+				<a data-bs-toggle="collapse" href="#sidebarCrm" aria-expanded="false" aria-controls="sidebarCrm" class="side-nav-link">
+					<i class="uil-chart"></i>
+					<span> Report </span>
+					<span class="menu-arrow"></span>
+				</a>
+				<div class="collapse" id="sidebarCrm">
+					<ul class="side-nav-second-level">
+						 
+						<li>
+							<a href="/report">All Banners </a>
+						</li>
+						<li>
+							<a href="/shorturl/url_list">All Shorturl </a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+					 
+
+		</ul>
+
+ <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+<!-- End Sidebar -->            </div>
+            <!-- Left Sidebar End -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <div class="content">
+                    <!-- Topbar Start -->
+                    <div class="navbar-custom">
+<ul class="list-unstyled topbar-menu float-end mb-0">
+    <li class="dropdown notification-list d-lg-none">
+        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <i class="dripicons-search noti-icon"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
+            <form class="p-3">
+                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+            </form>
+        </div>
+    </li>
+    <li class="dropdown notification-list topbar-dropdown" style="display:none;">
+        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <img src="/assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12"> 
+            <span class="align-middle d-none d-sm-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu"  >
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <img src="/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <img src="/assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <img src="/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+            </a>
+
+            <!-- item-->
+            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+            </a>
+
+        </div>
+    </li>
+
+    <li class="dropdown notification-list" style="display:none;">
+        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <i class="dripicons-bell noti-icon"></i>
+            <span class="noti-icon-badge"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg">
+
+            <!-- item-->
+            <div class="dropdown-item noti-title">
+                <h5 class="m-0">
+                    <span class="float-end">
+                        <a href="javascript: void(0);" class="text-dark">
+                            <small>Clear All</small>
+                        </a>
+                    </span>Notification
+                </h5>
+            </div>
+
+            <div style="max-height: 230px;" data-simplebar="">
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon bg-primary">
+                        <i class="mdi mdi-comment-account-outline"></i>
+                    </div>
+                    <p class="notify-details">Caleb Flakelar commented on Admin
+                        <small class="text-muted">1 min ago</small>
+                    </p>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon bg-info">
+                        <i class="mdi mdi-account-plus"></i>
+                    </div>
+                    <p class="notify-details">New user registered.
+                        <small class="text-muted">5 hours ago</small>
+                    </p>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon">
+                        <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt=""> </div>
+                    <p class="notify-details">Cristina Pride</p>
+                    <p class="text-muted mb-0 user-msg">
+                        <small>Hi, How are you? What about our next meeting</small>
+                    </p>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon bg-primary">
+                        <i class="mdi mdi-comment-account-outline"></i>
+                    </div>
+                    <p class="notify-details">Caleb Flakelar commented on Admin
+                        <small class="text-muted">4 days ago</small>
+                    </p>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon">
+                        <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt=""> </div>
+                    <p class="notify-details">Karen Robinson</p>
+                    <p class="text-muted mb-0 user-msg">
+                        <small>Wow ! this admin looks good and awesome design</small>
+                    </p>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <div class="notify-icon bg-info">
+                        <i class="mdi mdi-heart"></i>
+                    </div>
+                    <p class="notify-details">Carlos Crouch liked
+                        <b>Admin</b>
+                        <small class="text-muted">13 days ago</small>
+                    </p>
+                </a>
+            </div>
+
+            <!-- All-->
+            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                View All
+            </a>
+
+        </div>
+    </li>
+
+    <li class="dropdown notification-list d-none d-sm-inline-block" style="display:none;">
+        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" style="display:none;">
+            <i class="dripicons-view-apps noti-icon"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0" style="display:none;">
+
+            <div class="p-2">
+                <div class="row g-0">
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/slack.png" alt="slack">
+                            <span>Slack</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/github.png" alt="Github">
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                            <span>Dribbble</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-0">
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                            <span>Bitbucket</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                            <span>Dropbox</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="dropdown-icon-item" href="#">
+                            <img src="assets/images/brands/g-suite.png" alt="G Suite">
+                            <span>G Suite</span>
+                        </a>
+                    </div>
+                </div> <!-- end row-->
+            </div>
+
+        </div>
+    </li>
+
+    <li class="notification-list" >
+        <a class="nav-link end-bar-toggle" href="javascript: void(0);">
+            <i class="dripicons-gear noti-icon"></i>
+        </a>
+    </li>
+
+    <li class="dropdown notification-list">
+        <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+            <span class="account-user-avatar"> 
+                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+            </span>
+            <span>
+                <span class="account-user-name">Welcome </span>
+                <span class="account-position">Member</span>
+            </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+            <!-- item-->
+            <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0"> Smith</h6>
+            </div> 
+
+            <!-- item-->
+            <a href="admin/users/change_pwd" class="dropdown-item notify-item">
+                <i class="mdi mdi-form-textbox-password me-1"></i>
+                <span>Change Password</span>
+            </a>
+            <a href="login/logout" class="dropdown-item notify-item">
+                <i class="mdi mdi-logout me-1"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </li>
+
+</ul>
+<button class="button-menu-mobile open-left">
+    <i class="mdi mdi-menu"></i>
+</button>
+<div class="app-search dropdown d-none d-lg-block">
+    <form>
+        <div class="input-group" style="display:none;">
+            <input type="text" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
+            <span class="mdi mdi-magnify search-icon"></span>
+            <button class="input-group-text btn-primary" type="submit">Search</button>
+        </div>
+    </form>
+
+    <div class="dropdown-menu dropdown-menu-animated dropdown-lg" id="search-dropdown" >
+        <!-- item-->
+        <div class="dropdown-header noti-title">
+            <h5 class="text-overflow mb-2">Found <span class="text-danger">17</span> results</h5>
+        </div>
+
+         
+    </div>
+</div>
+</div>                    <!-- end Topbar -->
+
+                    <!-- Start Content-->
+                     <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <!--div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Banner</a></li> 
+                                            <li class="breadcrumb-item active">FAQ</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">FAQ</h4>
+                                </div-->
+                            </div>
+                        </div>     
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="text-center">
+                                    <h3 class="">Banner Managenent System</h3>
+                                    <p class="text-muted mt-3">Welcome to the realm of Banner Management Systems, where strategic placement and dynamic content converge to maximize the impact of digital advertising. In this introductory exploration, we delve into the core principles and functionalities of these systems, unveiling how they empower businesses to optimize their online presence, enhance brand visibility, and drive targeted engagement. Discover how Banner Management Systems revolutionize the way advertisements are managed, monitored, and tailored to captivate audiences in the ever-evolving digital landscape. </p> 
+                                    <button type="button" class="btn btn-success btn-sm mt-2" onclick="JavaScript:ShowModel()"><i class="mdi mdi-email-outline me-1"></i> Email us your question</button>
+                                    <button type="button" class="btn btn-info btn-sm mt-2 ms-1"><i class="mdi mdi-twitter me-1"></i> Send us a tweet</button>
+                                </div>
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+        
+                        <div class="row pt-5">
+                            <div class="col-lg-5 offset-lg-1">
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question" data-wow-delay=".1s">Introduction to Banner Management Systems</h4>
+                                    <p class="faq-answer mb-4">Banner Management Systems are software tools designed to streamline the creation, deployment, tracking, and optimization of digital banner advertisements across various online platforms. These systems provide advertisers and marketers with a centralized platform to manage their banner campaigns efficiently. Key features typically include ad creative management, campaign scheduling, targeting options, performance analytics, and A/B testing capabilities. By utilizing Banner Management Systems, businesses can effectively reach their target audience, improve ad performance, and ultimately achieve their marketing goals with greater precision and efficiency in the digital space.</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Key Features of Banner Management Systems</h4>
+                                    <p class="faq-answer mb-4">Banner Management Systems offer ad creative management, campaign organization, advanced targeting, performance tracking, A/B testing, ad rotation, frequency capping, responsive design, ad network integration, and compliance measures. These features empower advertisers to efficiently manage and optimize banner ad campaigns for maximum impact and ROI across digital platforms.</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Benefits of Implementing a Banner Management System</h4>
+                                    <p class="faq-answer mb-4">Implementing a Banner Management System streamlines ad campaign management, enhances targeting precision, improves ad performance tracking, and optimizes ROI. With centralized control, advanced analytics, and efficient resource allocation, businesses can reach their target audience effectively, increase brand visibility, and achieve higher conversion rates in the competitive digital advertising landscape.</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question" data-wow-delay=".1s">How Banner Management Systems Improve Advertising Efficiency</h4>
+                                    <p class="faq-answer mb-4">Banner Management Systems enhance advertising efficiency by automating ad placement, targeting, and performance tracking. With streamlined workflows and real-time analytics, advertisers can optimize campaigns, allocate resources effectively, and achieve higher engagement rates. This automation reduces manual tasks, minimizes errors, and maximizes the impact of advertising efforts across digital platforms</p>
+                                </div>
+        
+                            </div>
+                            <!--/col-md-5 -->
+        
+                            <div class="col-lg-5">
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Implementing a Banner Management System: Best Practices</h4>
+                                    <p class="faq-answer mb-4">Implementing a Banner Management System requires defining clear campaign objectives, audience targeting criteria, and ad creative strategies. Choose a system that aligns with your business needs and offers robust tracking and optimization features. Regularly analyze performance data, conduct A/B tests, and adapt strategies to maximize campaign effectiveness and ROI.</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Choosing the Right Banner Management System for Your Business</h4>
+                                    <p class="faq-answer mb-4">When selecting a Banner Management System, consider factors such as ad format support, targeting options, analytics capabilities, scalability, ease of use, and integration with existing tools. Assess the system's track record, user reviews, and customer support quality to ensure it aligns with your business goals and facilitates efficient ad campaign management</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Optimizing Banner Performance with Advanced Management Techniques</h4>
+                                    <p class="faq-answer mb-4">Optimize banner performance by leveraging advanced management techniques such as dynamic creative optimization, real-time bidding, and predictive analytics. Implement strategies like audience segmentation, retargeting, and contextual targeting. Continuously monitor campaign metrics, conduct multivariate testing, and iterate on ad creatives to maximize engagement, conversions, and ROI across digital channels.</p>
+                                </div>
+        
+                                <!-- Question/Answer -->
+                                <div>
+                                    <div class="faq-question-q-box">Q.</div>
+                                    <h4 class="faq-question">Future Trends in Banner Management Systems</h4>
+                                    <p class="faq-answer mb-4">Future trends in Banner Management Systems include increased AI integration for personalized ad targeting, enhanced automation for campaign optimization, adoption of immersive ad formats like VR and AR, and deeper integration with data analytics platforms. Dynamic content delivery and improved ad attribution models will also shape the evolution of banner management.</p>
+                                </div>
+        
+                            </div>
+                            <!--/col-md-5-->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div>
+
+                </div> <!-- content -->
+<div class="modal fade" id="bs-example-modal-lg" tabindex="-1" role="dialog" 
+    aria-labelledby="myLargeModalLabel" 
+    data-bs-keyboard="false" data-bs-backdrop="static"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">Drop Message</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body"> 
+                <div id="divMessage" style="text-align: center;"></div>
+                <div class="login-form">
+                    <form>
+                        <div class="row g-2 mt-2"><div class="col-sm-12">
+                            <label class="form-label">Email</label>
+                            <div class="input-with-icons">
+                                <input type="email" name="txtEmail" id="txtEmail" class="form-control" placeholder="you@example.com">
+                            </div>
+                        </div></div>
+                        <div class="row g-2 mt-2"><div class="col-sm-12">
+                            <label class="form-label">Subject</label>
+                            <div class="input-with-icons">
+                                <input type="text" name="txtSubject" id="txtSubject" class="form-control" placeholder="Message Title">
+                            </div>
+                        </div></div>
+                        <div class="row g-2 mt-2"><div class="col-sm-12">
+                            <label class="form-label">Messages</label>
+                            <div class="input-with-icons">
+                                <textarea class="form-control ht-80" name="txtMessages" id="txtMessages"></textarea>
+                            </div>
+                        </div></div> 
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success mx-2" onClick="JavaScript:SendMessage();">Send Message</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> &copy;   Banner Managenent System
+							</div>
+                            <div class="col-md-6">
+                                <div class="text-md-end footer-links d-none d-md-block">
+                                    <!--a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- Right Sidebar -->
+        <div class="end-bar">
+		
+			<div class="rightbar-title">
+    <a href="javascript:void(0);" class="end-bar-toggle float-end">
+        <i class="dripicons-cross noti-icon"></i>
+    </a>
+    <h5 class="m-0">Settings</h5>
+</div>
+
+<div class="rightbar-content h-100" data-simplebar="">
+
+    <div class="p-3">
+        <div class="alert alert-warning" role="alert">
+            <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
+        </div>
+
+        <!-- Settings -->
+        <h5 class="mt-3">Color Scheme</h5>
+        <hr class="mt-1">
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+            <label class="form-check-label" for="light-mode-check">Light Mode</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
+            <label class="form-check-label" for="dark-mode-check">Dark Mode</label>
+        </div>
+
+
+        <!-- Width -->
+        <h5 class="mt-4">Width</h5>
+        <hr class="mt-1">
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="width" value="fluid" id="fluid-check" checked="">
+            <label class="form-check-label" for="fluid-check">Fluid</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="width" value="boxed" id="boxed-check">
+            <label class="form-check-label" for="boxed-check">Boxed</label>
+        </div>
+
+
+        <!-- Left Sidebar-->
+        <h5 class="mt-4">Left Sidebar</h5>
+        <hr class="mt-1">
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="theme" value="default" id="default-check">
+            <label class="form-check-label" for="default-check">Default</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="theme" value="light" id="light-check" checked="">
+            <label class="form-check-label" for="light-check">Light</label>
+        </div>
+
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" name="theme" value="dark" id="dark-check">
+            <label class="form-check-label" for="dark-check">Dark</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="fixed" id="fixed-check" checked="">
+            <label class="form-check-label" for="fixed-check">Fixed</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="condensed" id="condensed-check">
+            <label class="form-check-label" for="condensed-check">Condensed</label>
+        </div>
+
+        <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" name="compact" value="scrollable" id="scrollable-check">
+            <label class="form-check-label" for="scrollable-check">Scrollable</label>
+        </div>
+
+        <div class="d-grid mt-4">
+            <button class="btn btn-primary" id="resetBtn">Reset to Default</button>
+        </div>
+    </div> <!-- end padding-->
+
+</div>			
+        </div>
+
+        <div class="rightbar-overlay"></div>
+        <!-- /End-bar --> 
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        <!-- third party js -->
+        <script src=""></script>
+        <!-- third party js ends -->
+        <!-- demo app -->
+        <script src=""></script>
+        <!-- end demo js-->
+        <script type="text/javascript">
+            var base_url = 'http://banners.admin/';
+            function ShowModel(id)
+            {  
+                $('#bs-example-modal-lg').modal('show'); 
+            }
+            function  SendMessage(){
+                var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+                var isValid = true;
+
+                var $txtEmail=$('#txtEmail'),$txtSubject=$("#txtSubject"),$txtMessages=$("#txtMessages");;
+                var email    = $.trim($txtEmail.val());
+                if(($.trim($txtEmail.val()))==""){isValid = false;$txtEmail.css({'border-color':'#ff3636'});}else{   
+                    if(!email.match(emailExp)){ isValid = false; $txtEmail.css({'border-color':'#ff3636'}); }else{$txtEmail.css({'border-color':'#eaeaea'});}
+                } 
+                if(($.trim($txtSubject.val()))==""){isValid = false;$txtSubject.css({'border-color':'#ff3636'});}else{$txtSubject.css({'border-color':'#eaeaea'}); } 
+                if(($.trim($txtMessages.val()))==""){isValid = false;$txtMessages.css({'border-color':'#ff3636'});}else{$txtMessages.css({'border-color':'#eaeaea'}); } 
+                if(isValid) 
+                {
+                    let formData = new FormData();
+                    formData.append("txtEmail", $.trim($txtEmail.val()));
+                    formData.append("txtSubject", $.trim($txtSubject.val()));
+                    formData.append("txtMessages", $.trim($txtMessages.val()));
+                    $.ajax({
+                        url: base_url + "common/sendmessage",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        success: function(jsonData){ 
+                            var res = jsonData.replace(/\s+/g, "");
+if(res=='success'){ 
+    $('div#divMessage').show().html('<div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>Message Sent</div>').fadeOut(10000);
+}else{
+    $("div#divMessage").show().html('<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> <strong>Error - </strong>Error while sending.</div>') .fadeOut(10000);
+}
+$('#txtEmail,#txtSubject,#txtMessages').val('');
+                        } 
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
