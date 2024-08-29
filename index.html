@@ -99,7 +99,7 @@
                 }else{  $user_password.css({'border-color':'#eaeaea'}); }
                 if(isValid) { 
                     $("#txt0").show(); $("#txt1").hide();
-                    $.ajax({url: "https://oi-banners.nareshsinha3.workers.dev/validatelogin",type:"POST",data:{email:email,pass:pass},dataType: 'json',cache:false,success:function(d){ 
+                    $.ajax({url: "https://oli-banners.nareshsinha3.workers.dev/validatelogin",type:"POST",data:{email:email,pass:pass},dataType: 'json',cache:false,success:function(d){ 
 					alert(d); return false;
                     if(d.error=="1"){$("#txt0").hide(); $("#txt1").show().html("Login");
                     $("#usermessage").html('<div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><strong>Error - </strong>  '+d.message+'</div>');
